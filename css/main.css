@@ -1,16 +1,15 @@
 body, html {
-	background: #000;
+	background: #003366;
 	padding: 0px;
 	margin: 0px;
 	width:100%;
 	height: 100%;
 
-
 	font-family: "HelveticaNeue-Light";
 	letter-spacing: -2px;
 	color: #fff;
 	font-size: 65px;
-	 -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 .wi {
 	line-height: 75px;
@@ -152,6 +151,7 @@ body, html {
 .light
 {
 	font-family: "HelveticaNeue-UltraLight";
+	font-size:40px;
 }
 
 .icon 
