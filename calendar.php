@@ -5,7 +5,7 @@
 	//$url = 'https://p19-calendars.icloud.com/published/2/44ROgzhahcsqZpKXUZVOKPg2EXIMFnbml5q790athQk0wmzn2QYwlcENvin0AgWjdS6RpcSBPbdg-StC47OQkJC01csEMJ0m7VVeteEDyhU';
 	//$url = 'https://www.google.com/calendar/ical/mtps.us_6k3adsjlsnanqkgk714ik9253g%40group.calendar.google.com/public/basic.ics';
 	//$url = 'https://ical.mac.com/ical/US32Holidays.ics'
-	$url = 'webcal://p19-calendars.icloud.com/published/2/DxDgXCA8PyiQO8FUrpyO33igHSNtm6xEkcesTRvpPSi30EIN_I2tPwj49DTdWz3P5ZZkvqy9lUyffIYaiK4idTRoAscGcP9R0Ii_vdEtwD0';
+	$url = 'https://p19-calendars.icloud.com/published/2/DxDgXCA8PyiQO8FUrpyO33igHSNtm6xEkcesTRvpPSi30EIN_I2tPwj49DTdWz3P5ZZkvqy9lUyffIYaiK4idTRoAscGcP9R0Ii_vdEtwD0';
 	
 	/*****************************************/
 
