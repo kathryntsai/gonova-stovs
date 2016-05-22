@@ -2,8 +2,10 @@
 	
 	// Set the ical url of the calendar feed by changing webcal to https.
 	//$url = 'https://p01-calendarws.icloud.com/ca/subscribe/1/n6x7Farxpt7m9S8bHg1TGArSj7J6kanm_2KEoJPL5YIAk3y70FpRo4GyWwO-6QfHSY5mXtHcRGVxYZUf7U3HPDOTG5x0qYnno1Zr_VuKH2M';
-	$url = 'https://p19-calendars.icloud.com/published/2/44ROgzhahcsqZpKXUZVOKPg2EXIMFnbml5q790athQk0wmzn2QYwlcENvin0AgWjdS6RpcSBPbdg-StC47OQkJC01csEMJ0m7VVeteEDyhU';
+	//$url = 'https://p19-calendars.icloud.com/published/2/44ROgzhahcsqZpKXUZVOKPg2EXIMFnbml5q790athQk0wmzn2QYwlcENvin0AgWjdS6RpcSBPbdg-StC47OQkJC01csEMJ0m7VVeteEDyhU';
 	//$url = 'https://www.google.com/calendar/ical/mtps.us_6k3adsjlsnanqkgk714ik9253g%40group.calendar.google.com/public/basic.ics';
+	//$url = 'https://ical.mac.com/ical/US32Holidays.ics'
+	$url = 'webcal://p19-calendars.icloud.com/published/2/DxDgXCA8PyiQO8FUrpyO33igHSNtm6xEkcesTRvpPSi30EIN_I2tPwj49DTdWz3P5ZZkvqy9lUyffIYaiK4idTRoAscGcP9R0Ii_vdEtwD0';
 	
 	/*****************************************/
 
