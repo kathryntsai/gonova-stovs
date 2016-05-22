@@ -225,15 +225,15 @@ jQuery(document).ready(function($) {
 		while (compliment == lastCompliment) {
      
       //Check for current time  
-      var compliments;
+      var compliments = complimentsArray;
       var date = new Date();
       var hour = date.getHours();
       //set compliments to use
-      if (hour >= 3 && hour < 9) compliments = morning;
+      /*if (hour >= 3 && hour < 9) compliments = morning;
       if (hour >= 9 && hour < 12) compliments = midmorning;
       if (hour >= 12 && hour < 17) compliments = afternoon;
       if (hour >= 17 && hour < 22) compliments = evening;
-      if (hour >= 22 || hour < 3) compliments = night;
+      if (hour >= 22 || hour < 3) compliments = night;*/
 
 		compliment = Math.floor(Math.random()*compliments.length);
 		}
@@ -272,7 +272,7 @@ jQuery(document).ready(function($) {
 		}
 
 
-		$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Cambridge,us&mode=json', weatherParams, function(json, textStatus) {
+		$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Villanova,us&mode=json', weatherParams, function(json, textStatus) {
 
 			var temp = roundVal(json.main.temp);
 			// var temp_min = roundVal(json.main.temp_min);
@@ -340,7 +340,7 @@ jQuery(document).ready(function($) {
 			'13n':'wi-night-snow',
 			'50n':'wi-night-alt-cloudy-windy'
 		}
-			$.getJSON('http://api.openweathermap.org/data/2.5/forecast/', weatherParams, function(json, textStatus) {
+			$.getJSON('http://api.openweathermap.org/data/2.5/forecast?q=Villanova', weatherParams, function(json, textStatus) {
 			var forecastData = {};
 
 			for (var i in json.list) {
@@ -412,6 +412,9 @@ jQuery(document).ready(function($) {
 						newsLink.push(item.link);
 					}
 					else if (feedSource == INSTAGRAM){
+						news.push(item.description);
+					}
+					else if (feedSource == VILLANOVA){
 						news.push(item.description);
 					}
 					else{

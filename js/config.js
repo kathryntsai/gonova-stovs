@@ -5,11 +5,14 @@ var alarmMinute = 30; //Do not set past 59
 var alarmMeridian = "A"; //A or P
 var printAlarm = "6:30AM";
 var feedSource = 3;
-//1 - Twitter
-//2 - Instagram
-//3 - WSJ
-//4 - CNN
-//5 - NYTimes
+
+//feed source constants
+var VILLANOVA = 0;
+var TWITTER = 1;
+var INSTAGRAM = 2;
+var WSJ = 3;
+var CNN = 4;
+var NYTIMES = 5;
 
 //how many events displayed on Calendar?
 var NUM_EVENTS = 10;
@@ -17,9 +20,10 @@ var NUM_EVENTS = 10;
 //change weather params here:
 //units: metric or imperial
 var weatherParams = {
-    'q':'Philadelphia,PA',
+    'q':'Villanova,PA',
     'units':'imperial',
-    'lang':lang
+    'lang':lang,
+    'APPID': 'c823f2a2e40c9424af38e02763a063da'
 };
 
 // for navigator language
@@ -30,7 +34,7 @@ var lang = window.navigator.language;
 //sets moment.js lang
 moment.lang(lang);
 
-//Spectra's playlist
+/*//Spectra's playlist
 var songArray = [
 	{
 		name: "Man in the Mirror",
@@ -144,14 +148,7 @@ var songArray = [
 		year: "1968"
 	},
 	
-];
-
-//feed source constants
-var TWITTER = 1;
-var INSTAGRAM = 2;
-var WSJ = 3;
-var CNN = 4;
-var NYTIMES = 5;
+];*/
 
 //set alarmBoole
 if (printAlarm.indexOf("P") > -1){
@@ -162,7 +159,10 @@ else {
 }
 
 //set RSS feed
-if (feedSource == TWITTER){
+if (feedSource == VILLANOVA){
+	var feed = 'https://www1.villanova.edu/content/villanova/business/newsevents/news/_jcr_content/pagecontent/newslist.feed';
+}
+else if (feedSource == TWITTER){
 	var feed = 'https://script.googleusercontent.com/macros/echo?user_content_key=pAtTLF6_Wx1VsrgaPst5OqOBcXaA7sgj5L6T1d_-vFcnnwLEAi0s7B13j-7WYHMpq4Y708mFJ-b4mAJ71h8YKOXvV2lkqYcvm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGWPa3klBRhrFvS2X-s_RsFnMhcQrQeSEdOFKSz4xLz0zM1t57f7dIMg_FNa1L0jfi5ma1nUJcHuAz_02T9Z4aw10kcuhaTZndAMOY8IX9PP&lib=M_tLyEO7ilhYy2ZHCPI2thkoU2qvfDcTZ'
 }
 else if (feedSource == INSTAGRAM){
@@ -222,8 +222,21 @@ else{
 
 // compliments:
 
-var randSong = Math.floor(Math.random() * songArray.length);
-var morning = [
+//var randSong = Math.floor(Math.random() * songArray.length);
+var complimentsArray = [
+	'Patience is the companion of wisdom.',
+	'Pray as though everything depended on God. Work as though everything depended on you.',
+	'God loves each of us as if there were only one of us.',
+	'It was pride that changed angels into devils; it is humility that makes men as angels.',
+	"If you believe what you like in the gospels, and reject what you don't like, it is not the gospel you believe, but yourself.",
+	'There is something in humility which strangely exalts the heart.',
+	'This is the very perfection of a man, to find out his own imperfections.',
+	'Seek not to understand that you may believe, but believe that you may understand.',
+	'Since love grows within you, so beauty grows. For love is the beauty of the soul.',
+	'Miracles are not contrary to nature, but only contrary to what we know about nature.'
+
+];
+/*var morning = [
 			'Good morning, sunshine!', //use for example
 			"Don't forget to brush your teeth!",
             'Enjoy your day!',
@@ -274,3 +287,4 @@ var night = [
 			"Your alarm is set for " + printAlarm + ". If you sleep now, you must wake up " + printTime + ".", //use for example
 			"At night, I listen to '" + songArray[randSong].name + "' by " + songArray[randSong].artist + " (" + songArray[randSong].year + ")."//use for example
         ];
+*/
